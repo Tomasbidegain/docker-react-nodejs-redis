@@ -45,7 +45,7 @@ const AllEpisodes = ( {open, handleClose }) => {
           >
             <TableCell component="th" scope="row">{episode[0]}</TableCell>
             <TableCell align="right">{episode[1]}</TableCell>
-            <TableCell align="right" sx={{color: episode[2]==='available' ? 'green' : episode[2] === 'reserved' ? 'yellow' : 'red'}}>{episode[2]}</TableCell>
+            <TableCell align="right" sx={{color: episode[2]==='available' ? 'green' : episode[2] === 'reserved' ? 'yellow' : 'red'}}>{episode[2]==='available' ? 'Disponible' : episode[2] === 'reserved' ? 'Reservado' : 'Alquilado' }</TableCell>
           </TableRow>)
         }):(<>No hay episodios</>)}
       </TableBody>
