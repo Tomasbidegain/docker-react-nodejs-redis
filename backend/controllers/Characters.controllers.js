@@ -8,11 +8,6 @@ const addCharacter = async (req, res) => {
 
 const getAllCharacters = async (req, res) => {
   const response = await redisclient.lRange("lista_key", 0, -1)
-  // const data = [response]
-  // miArray = data.map(item => JSON.parse(item));
-  // console.log(miArray)
-  // return 
-  // res.send(data)
   const characters = response.map(item => {
     try {
       return JSON.parse(item);

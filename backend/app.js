@@ -8,6 +8,7 @@ app.use(cors())
 app.use(express.json());
 
 const CharactersRoutes = require('./routes/Characters.routes')
+const EpisodesRoutes = require('./routes/Episodes.routes')
 
 redisclient.connect()
 
@@ -40,6 +41,7 @@ redisclient.on("error", (err) => {
 // })()
 
 app.use(CharactersRoutes)
+app.use(EpisodesRoutes)
 app.listen(3001, function(){
     console.log('Aplicacion corriendo en el puerto 3001')
 })

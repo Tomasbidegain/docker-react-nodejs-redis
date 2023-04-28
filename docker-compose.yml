@@ -7,7 +7,7 @@ services:
     ports:
       - '3001:3001'
     volumes:
-      - ./backend:/backend
+      - /home/tomasbidegain/Facultad/4to AÑO/bbdd-nsql/TP2/TP-redis/backend:/backend
     depends_on:
       - "db-redis"
 
@@ -26,7 +26,7 @@ services:
     ports:
       - '3000:3000'
     volumes:
-      - ./frontend:/frontend
+      - /home/tomasbidegain/Facultad/4to AÑO/bbdd-nsql/TP2/TP-redis/frontend:/frontend
     depends_on:
       - "backend"
     # working_dir: /home/tomasbidegain/Facultad/4to AÑO/bbdd-nsql/TP2/TP-redis/frontend
